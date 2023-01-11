@@ -22,6 +22,8 @@ globals [
   new-passengers
   num-initial-infected ; number of initially infected passengers (10%)
 
+  initial-passengers
+
 ]
 
 viruses-own [
@@ -138,9 +140,9 @@ to setup
   print (list "Number of infected passengers = " num-initial-infected)
   print (list "simulation-length             = " simulation-length "hr")
   print (list "infection-probability         = " infection-probability "%")
-  print (list "protected-population          = " protected-population  "%")
-  print (list "stationary-infection-period   = " stationary-infection-period "min")
-  print (list "passenger-moving-speed        = " passenger-moving-speed "patch")
+  ;print (list "protected-population          = " protected-population  "%")
+  ;print (list "stationary-infection-period   = " stationary-infection-period "min")
+  ;print (list "passenger-moving-speed        = " passenger-moving-speed "patch")
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ; Calling various setup methods ;
@@ -885,21 +887,6 @@ NIL
 1
 
 SLIDER
-1228
-184
-1403
-217
-initial-passengers
-initial-passengers
-5
-40
-35.0
-5
-1
-NIL
-HORIZONTAL
-
-SLIDER
 839
 227
 1016
@@ -927,36 +914,6 @@ infection-probability
 5
 1
 %
-HORIZONTAL
-
-SLIDER
-1228
-310
-1404
-343
-protected-population
-protected-population
-0
-100
-100.0
-5
-1
-%
-HORIZONTAL
-
-SLIDER
-1228
-265
-1403
-298
-stationary-infection-period
-stationary-infection-period
-0
-100
-10.0
-10
-1
-min
 HORIZONTAL
 
 SWITCH
@@ -1087,21 +1044,6 @@ min
 HORIZONTAL
 
 SLIDER
-1229
-224
-1403
-257
-passenger-moving-speed
-passenger-moving-speed
-1
-10
-10.0
-1
-1
-patch
-HORIZONTAL
-
-SLIDER
 1036
 226
 1213
@@ -1131,17 +1073,6 @@ seat-capacity
 %
 HORIZONTAL
 
-SWITCH
-1226
-51
-1401
-84
-print-sim-details?
-print-sim-details?
-1
-1
--1000
-
 TEXTBOX
 848
 21
@@ -1162,26 +1093,6 @@ Other Parameters:
 0.0
 1
 
-TEXTBOX
-1226
-19
-1376
-37
-Help Functions:
-13
-0.0
-1
-
-TEXTBOX
-1233
-159
-1400
-191
-Set to random (not used):
-13
-0.0
-1
-
 SLIDER
 840
 182
@@ -1198,10 +1109,10 @@ min
 HORIZONTAL
 
 SLIDER
-842
-356
+839
+354
 1019
-389
+387
 max-time-onboard
 max-time-onboard
 30
